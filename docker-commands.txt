@@ -1,0 +1,25 @@
+To pull the docker image from dockerhub.
+docker pull <image>
+
+
+To run the docker image with specific port number.
+docker run -p <port-number> <image>
+
+To see the running docker images.
+docker ps
+
+
+To stop the running docker image.
+docker stop <docker-process-id>
+
+
+To run the docker image in interactive shell mode.
+docker exec -it <docker-process-id> sh
+
+
+To remove the image. 
+docker rmi --force <image-id>
+
+
+To see the details of image. 
+docker image inspect <image-id>   OR  docker inspect <docker-process-id>
