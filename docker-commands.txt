@@ -2,18 +2,26 @@ To pull the docker image from dockerhub.
 docker pull <image>
 
 
-To run the docker image with specific port number.
-docker run -p <port-number> <image>
+To run the docker container with specific port number.
+docker run -p <host-port-number>:<docker-internal-port-number> <image>
 
-To see the running docker images.
+
+
+To the run the docker container in detached mode
+docker run -p <port-number> -d <image>
+
+
+
+To see the running docker containers.
 docker ps
+docker container ls
 
 
-To stop the running docker image.
+To stop the running docker containers.
 docker stop <docker-process-id>
 
 
-To run the docker image in interactive shell mode.
+To run the docker container in interactive shell mode.
 docker exec -it <docker-process-id> sh
 
 
@@ -23,3 +31,25 @@ docker rmi --force <image-id>
 
 To see the details of image. 
 docker image inspect <image-id>   OR  docker inspect <docker-process-id>
+
+
+To list the docker images on the system.
+docker image ls
+docker images
+
+
+example command to run the docker image
+docker run -p 5000:5000 <image-name>:tag
+
+-p = to specify the port number
+5000:5000 = first 5000 is the host port and second 5000 is the port of docker internal network.
+tag = it used to specify the version number. If this option is not used docker will attach default tag i.e. latest
+
+
+To see the logs of running container
+docker log <container-id> 
+
+
+To tail the logs of running containers
+docker log -f <container-id> 
+
