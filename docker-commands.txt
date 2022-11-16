@@ -8,7 +8,7 @@ docker run -p <host-port-number>:<docker-internal-port-number> <image>
 
 
 To the run the docker container in detached mode
-docker run -p <port-number> -d <image>
+docker run -p <host-port-number>:<docker-internal-port-number> -d <image>
 
 
 
@@ -17,12 +17,17 @@ docker ps
 docker container ls
 
 
+To see all the containers which are running and stopped
+docker container ls -a
+
+
 To stop the running docker containers.
-docker stop <docker-process-id>
+docker stop <container-id>
+docker container stop <container-id>
 
 
 To run the docker container in interactive shell mode.
-docker exec -it <docker-process-id> sh
+docker exec -it <container-id> sh
 
 
 To remove the image. 
