@@ -79,3 +79,22 @@ docker image history <image-id>
           OR
 docker image history <image-name>
 
+
+To pause and unpause the container
+docker container pause <container-id>         - pause command saves the state of container running
+	
+docker conatiner unpause <container-id>
+
+
+To remove all the stopped container
+docker container prune
+
+
+To stop the container immediately 
+docker container kill <conatiner-id>
+
+
+To give container restart policy i.e. whenever docker daemon is restarted the container should also restart automatically.
+docker run -p HOST_PORT_NUMBER:DOCKER_PORT_NUMBER --restart=always -d <image-name>
+NOTE:- default option for restart is no.
+
