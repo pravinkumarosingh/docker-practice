@@ -32,6 +32,8 @@ docker exec -it <container-id> sh
 
 To remove the image. 
 docker rmi --force <image-id>
+		OR
+docker image remove <image-id>
 
 
 To see the details of image. 
@@ -57,4 +59,23 @@ docker log <container-id>
 
 To tail the logs of running containers
 docker log -f <container-id> 
+
+
+To attach the tag for the image
+docker tag <image-name>:<tag-name>
+
+
+To rename the tag for image
+docker tag <image-name>:<old-tag-name> <image-name>:<tag-name>
+
+
+To search the image
+docker search <image-name>
+
+
+
+To see the history of docker images
+docker image history <image-id>
+          OR
+docker image history <image-name>
 
