@@ -98,3 +98,24 @@ To give container restart policy i.e. whenever docker daemon is restarted the co
 docker run -p HOST_PORT_NUMBER:DOCKER_PORT_NUMBER --restart=always -d <image-name>
 NOTE:- default option for restart is no.
 
+
+To see the background process of the docker
+docker events 
+in another terminal run docker commands.
+
+
+To see the top process in a specific container
+docker top <container-id>
+
+
+To see the stats of the all the running containers
+docker stats
+
+To assign the memmory and cpu of specific size
+docker run -p HOST_PORT_NUMBER:DOCKER_PORT_NUMBER --restart=always -m <size-in-megabytes>m --cpu-quota <number out of 100000> -d <image-name>
+NOTE :- 100000 = 100%
+	   5000   =  5%
+
+To see the docker daemon management information
+docker system df
+
