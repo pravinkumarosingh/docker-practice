@@ -10,6 +10,8 @@ docker run -p <host-port-number>:<docker-internal-port-number> <image>
 To the run the docker container in detached mode
 docker run -p <host-port-number>:<docker-internal-port-number> -d <image>
 
+what is detached mode?
+By runnning the container in detached mode you can close your terminal and docker container will run in background.
 
 
 To see the running docker containers.
